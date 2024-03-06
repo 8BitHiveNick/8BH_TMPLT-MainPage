@@ -138,3 +138,28 @@ html, body {
     transform: scale(1.3); /* Slightly zooms in the image on hover */
   }
   
+  .services {
+    background-image: url('../img/services/services_bg.png'); /* Path to your background image */
+    background-size: cover; /* Cover the entire section */
+    background-position: center; /* Center the background image */
+    background-attachment: fixed; /* Make the background static */
+    position: relative; /* Establish a stacking context */
+  }
+  
+  .services::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8); /* Optional: Dark overlay to enhance readability */
+    z-index: 1;
+  }
+  
+  /* Ensure the content is above the overlay */
+  .services > .container-lg {
+    position: relative;
+    z-index: 2;
+  }
+  
