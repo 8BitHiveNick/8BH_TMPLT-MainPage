@@ -1,0 +1,57 @@
+/* NAVIGATION */
+
+.nav-link-hover:hover {
+    color: #ffc107 !important; /* Use the warning color */
+}
+
+/* Dropdown menu styling to match the navbar */
+.navbar .dropdown-menu {
+    background-color: #343a40; /* Same as navbar background */
+    /* If you have a specific font family in use for the navbar, apply it here as well */
+  }
+  
+  /* Dropdown item styling for text color and hover effects */
+  .navbar .dropdown-menu .dropdown-item {
+    color: #ffffff; /* White text for dropdown items */
+    font-weight: normal; /* Match the font weight as per your preference, adjust if needed */
+  }
+  
+  .navbar .dropdown-menu .dropdown-item:hover {
+    background-color: #ffc107; /* Optional: Change background color on hover to match the "warning" theme */
+    color: #343a40; /* Change text color on hover for better contrast, if needed */
+  }
+  
+
+/* HERO */
+.home {
+    position: relative;
+    background-image: url('../img/hero.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+  
+  .home::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8); /* Dark grey overlay */
+    z-index: 1;
+  }
+  
+  /* Ensure content is above the overlay */
+  .home > .container-lg {
+    position: relative;
+    z-index: 2;
+  }
+  
+  /* Optionally, if you want to ensure the image covers older browsers that don't support background-attachment: fixed */
+  @supports not (background-attachment: fixed) {
+    .home {
+      background-attachment: scroll;
+    }
+  }
+  
