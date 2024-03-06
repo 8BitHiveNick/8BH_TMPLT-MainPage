@@ -118,3 +118,23 @@ html, body {
     /* Additional styling as needed, e.g., border-radius for roundness */
   }
   
+  /* SERVICES */
+  .service-image {
+    display: inline-block;
+    border: 7px solid #ffc107; /* Bootstrap 'danger' color */
+    border-radius: 50%; /* Makes the border circular */
+    overflow: hidden; /* Ensures the zoomed image does not extend beyond the border */
+    line-height: 0; /* Removes any extra space inside the div */
+  }
+  
+  .service-image .service-img {
+    width: 100px; /* Adjust based on your preference */
+    height: 100px; /* Adjust to keep the image circular */
+    transition: transform 0.3s ease; /* Smooth transition for zoom effect */
+    border-radius: 50%; /* Ensures the image itself is circular */
+  }
+  
+  .service-image:hover .service-img {
+    transform: scale(1.3); /* Slightly zooms in the image on hover */
+  }
+  
