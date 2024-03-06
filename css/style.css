@@ -1,3 +1,14 @@
+/* DEFAULTS */
+html, body {
+    background-color: #000; /* Set background color to black */
+    width: 100%; /* Ensure full width */
+    height: 100%; /* Ensure full height */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    overflow-x: hidden; /* Prevent horizontal scroll */
+  }
+  
+
 /* NAVIGATION */
 
 .nav-link-hover:hover {
