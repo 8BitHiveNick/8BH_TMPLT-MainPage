@@ -63,7 +63,7 @@ html, body {
       background-attachment: scroll;
     }
   }
-  
+
   /* ABOUT */
   .about {
     position: relative;
@@ -199,7 +199,7 @@ html, body {
   
   .pricing-card .card-header {
     background-color: #343a40;
-    color: #ffffff;
+    color: #ffc107;
   }
   
   .pricing-card .card-body {
@@ -219,4 +219,30 @@ html, body {
   .pricing-card a.btn {
     margin-top: 20px;
   }
+
+  .pricing-card span {
+    color: #ffc107;
+  }
   
+/* PORTFOLIO */
+.portfolio .card {
+  background-color: #343a40; /* Dark grey background */
+  color: #fff; /* White text */
+  overflow: hidden; /* Ensures nothing overflows from the card */
+  padding: 5px; /* Adds padding inside the card for a bit of space around edges */
+}
+
+.portfolio .card .card-img-top {
+  width: calc(100% - 10px); /* Adjusts width to account for padding */
+  height: auto; /* Maintains aspect ratio */
+  margin: 5px; /* Centers image with padding around it */
+  object-fit: cover; /* Ensures image covers its area */
+}
+
+.portfolio .card .btn-warning {
+  color: #343a40; /* Dark text for contrast against the warning button */
+}
+
+.portfolio .card-body {
+  padding: 15px; /* Provides more space inside the card body */
+}
