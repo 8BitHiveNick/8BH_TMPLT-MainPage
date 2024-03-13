@@ -191,12 +191,36 @@ html, body {
   }
   
   
-  
   .pricing-card {
+    position: relative;
+    overflow: hidden; /* Ensure the overlay doesn't exceed the card's bounds */
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    background-image: linear-gradient(to right top, black, grey, #8f875c, grey, black);
     border: none;
   }
   
+  .card-content {
+    position: relative; /* Ensures content is above the overlay */
+    z-index: 2; /* Higher than the overlay */
+  }
+  
+  .card-hover-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right bottom, #111, #777, #8f875c, #777, #111); /* Your hover gradient */
+    opacity: 0; /* Hidden by default */
+    transition: opacity 0.5s ease; /* Smooth transition for the overlay */
+    z-index: 1; /* Below the content but above the card's background */
+  }
+  
+  .pricing-card:hover .card-hover-overlay {
+    opacity: 1; /* Reveals the overlay on hover */
+  }
+  
+
   .pricing-card .card-header {
     background-color: #343a40;
     color: #ffc107;
@@ -223,26 +247,101 @@ html, body {
   .pricing-card span {
     color: #ffc107;
   }
+
+  
+
+  .btn-warning:hover {
+    background-color: #e0a800; /* Lighter or different color */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
   
 /* PORTFOLIO */
+
+.portfolio {
+  position: relative;
+  background-image: url('../img/portfolio/portfolio_bg.jpg'); /* Path to your image */
+  background-size: cover; /* Cover the entire section */
+  background-position: center; /* Center the background image */
+  background-attachment: fixed; /* Optional: Creates a parallax-like effect */
+}
+
+/* Dark Overlay on Portfolio Section */
+.portfolio::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8); /* Adjust the overlay opacity as needed */
+  z-index: 1;
+}
+
+/* Ensure content is above the overlay */
+.portfolio > .container-lg {
+  position: relative;
+  z-index: 2;
+}
+
+/* Enhance overall card appearance */
 .portfolio .card {
-  background-color: #343a40; /* Dark grey background */
-  color: #fff; /* White text */
-  overflow: hidden; /* Ensures nothing overflows from the card */
-  padding: 5px; /* Adds padding inside the card for a bit of space around edges */
+  background-color: rgba(52, 58, 64, 0.8); /* Semi-transparent background */
+  color: #fff;
+  overflow: hidden;
+  padding: 5px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  border: none;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
+/* Hover effect for cards */
+.portfolio .card:hover {
+  transform: scale(1.03);
+  background-image: linear-gradient(to right, black, #8f875c, grey);
+}
+
+/* Adjustments for images */
 .portfolio .card .card-img-top {
-  width: calc(100% - 10px); /* Adjusts width to account for padding */
-  height: auto; /* Maintains aspect ratio */
-  margin: 5px; /* Centers image with padding around it */
-  object-fit: cover; /* Ensures image covers its area */
+  width: calc(100% - 10px);
+  height: auto;
+  margin: 5px;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
 }
 
+/* Enhance button appearance and interaction */
 .portfolio .card .btn-warning {
-  color: #343a40; /* Dark text for contrast against the warning button */
+  color: #343a40;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.portfolio .card .btn-warning:hover {
+  background-color: #ffcc00;
+  color: #ffffff;
+  transform: translateY(-2px);
 }
 
 .portfolio .card-body {
-  padding: 15px; /* Provides more space inside the card body */
+  padding: 15px;
+}
+
+
+/* FOOTER */
+.footer {
+  background-color: #343a40; /* Dark footer background */
+  color: #ffc107; /* Bootstrap warning color for text */
+}
+
+.footer a.text-warning {
+  color: #ffc107; /* Ensures icons use the Bootstrap warning color */
+  font-size: 1.25rem; /* Increase icon size */
+}
+
+.footer a.text-warning:hover {
+  color: white; /* Slightly darker shade for hover effect */
+}
+
+.footer p {
+  color: #ffffff; /* White color for text */
 }
