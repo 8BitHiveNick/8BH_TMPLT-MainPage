@@ -297,7 +297,7 @@ html, body {
 
 /* Hover effect for cards */
 .portfolio .card:hover {
-  transform: scale(1.03);
+  transform: scale(1.01);
   background-image: linear-gradient(to right, black, #8f875c, grey);
 }
 
