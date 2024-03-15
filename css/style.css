@@ -345,3 +345,25 @@ html, body {
 .footer p {
   color: #ffffff; /* White color for text */
 }
+
+/* 404 */
+
+.error-container {
+  text-align: center;
+  padding: 40px;
+}
+.error-code {
+  color: #ffc107;
+  font-size: 5em;
+}
+.error-message {
+  color: #f8f9fa;
+  font-size: 2em;
+}
+.error-detail {
+  color: #ced4da;
+  font-size: 1.2em;
+}
+a {
+  color: #ffc107;
+}
