@@ -5,6 +5,7 @@ html, body {
     margin: 0; /* Remove default margin */
     padding: 0; /* Remove default padding */
     overflow-x: hidden; /* Prevent horizontal scroll */
+    font-family: 'Bai Jamjuree', sans-serif;
 }
 
 /* NAVIGATION */
@@ -173,6 +174,14 @@ html, body {
     background-attachment: fixed;
   }
   
+.list-unstyled li {
+  color: white;
+}
+
+.pricing-card p {
+  color: white;
+}
+
   .pricing::before {
     content: "";
     position: absolute;
