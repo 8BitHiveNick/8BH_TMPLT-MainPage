@@ -417,6 +417,33 @@ button[type="submit"]:hover {
   opacity: 0.9;
 }
 
+.contact {
+  background: url('../img/contact/contact_original.jpg') no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  background-color: #343a40; /* Dark grey background, similar to your theme */
+  color: #ffffff; /* White text color */
+  padding: 40px 0; /* Ample padding for visual space */
+  text-align: center; /* Center the content */
+}
+
+.contact::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.9); /* Dark overlay for text contrast */
+  z-index: 2; /* Ensure this is below the actual content */
+}
+
+.contact .container, .contact .container-lg, .contact .row, .contact form, .contact .col {
+  position: relative;
+  z-index: 3; /* Ensure content is above the overlay */
+}
+
 
 /* TESTIMONIALS */
 .testimonials {
@@ -437,7 +464,7 @@ button[type="submit"]:hover {
   right: 0;
   bottom: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.7); /* Dark overlay for text contrast */
+  background: rgba(0, 0, 0, 0.8); /* Dark overlay for text contrast */
   z-index: 1;
 }
 
@@ -472,5 +499,11 @@ button[type="submit"]:hover {
   }
   100% {
       transform: scale(1);
+  }
+}
+
+@media (max-width: 992px) { /* Adjusts for Bootstrap's large (lg) breakpoint or your specific needs */
+  .custom-quote-button {
+    margin-right: 20px; /* Adjust the margin as needed */
   }
 }
