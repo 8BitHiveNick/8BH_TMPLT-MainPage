@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
 
         // Set the recipient email address.
-        $to = 'your@example.com'; // Note: Update this to your desired email address.
+        $to = 'nick@8bithive.com'; // Note: Update this to your desired email address.
 
         // Set the email subject.
         $subject = 'Contact Form Submission from ' . $name;
