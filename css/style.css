@@ -416,3 +416,61 @@ button[type="submit"] {
 button[type="submit"]:hover {
   opacity: 0.9;
 }
+
+
+/* TESTIMONIALS */
+.testimonials {
+  background: url('../img/testimonial/feeback_bg.png') no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  background-color: #343a40; /* Dark grey background, similar to your theme */
+  color: #ffffff; /* White text color */
+  padding: 40px 0; /* Ample padding for visual space */
+  text-align: center; /* Center the content */
+}
+
+.testimonials::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7); /* Dark overlay for text contrast */
+  z-index: 1;
+}
+
+/* Ensure content is visually above the overlay */
+.testimonials .container {
+  position: relative;
+  z-index: 2;
+}
+
+.testimonials h2 {
+  color: #ffc107; /* Warning color for heading */
+  margin-bottom: 20px; /* Space between heading and paragraph */
+}
+
+.testimonials p {
+  margin-bottom: 20px; /* Space between paragraph and icon */
+  font-size: 18px; /* Slightly larger font size for visibility */
+}
+
+.testimonials i {
+  font-size: 24px; /* Larger icon size */
+  animation: pulse 2s infinite; /* Add a subtle pulse animation */
+}
+
+/* Pulse animation for the clock icon */
+@keyframes pulse {
+  0% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.1);
+  }
+  100% {
+      transform: scale(1);
+  }
+}
