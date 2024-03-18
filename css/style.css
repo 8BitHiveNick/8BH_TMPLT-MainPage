@@ -376,3 +376,43 @@ html, body {
 a {
   color: #ffc107;
 }
+
+
+/* CONTACT */ 
+form#contact-form {
+  background-color: #343a40; /* Dark grey background */
+  padding: 20px;
+  border-radius: 8px;
+  color: #ffc107; /* Warning color for text */
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input, .form-group textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  box-sizing: border-box; /* Makes sure padding does not affect overall width */
+}
+
+button[type="submit"] {
+  background-color: #ffc107; /* Warning color */
+  color: #343a40; /* Dark grey for text */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  opacity: 0.9;
+}
