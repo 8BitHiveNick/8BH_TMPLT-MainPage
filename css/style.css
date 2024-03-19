@@ -25,6 +25,7 @@ html, body {
     color: #ffffff; /* White text for dropdown items */
     font-weight: normal; /* Match the font weight as per your preference, adjust if needed */
   }
+
   
   .navbar .dropdown-menu .dropdown-item:hover {
     background-color: #ffc107; /* Optional: Change background color on hover to match the "warning" theme */
@@ -521,6 +522,55 @@ button[type="submit"]:hover {
       transform: scale(1);
   }
 }
+
+/* Testimonial Carousel */
+/* Enhanced Testimonial Carousel Styles */
+
+#testimonialCarousel {
+  position: relative; /* Ensures z-index is applied correctly */
+  z-index: 3; /* Higher than the background/overlay */
+}
+
+#testimonialCarousel .carousel-inner {
+  display: flex;
+  justify-content: center; /* Center the items horizontally */
+  align-items: center; /* Center the items vertically */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Optional: Adds a subtle shadow to text for better readability */
+}
+
+#testimonialCarousel .carousel-item {
+  color: #fff; /* Ensures text color is white for better contrast */
+  min-height: 200px; /* Minimum height to accommodate content */
+  max-width: 80%; /* Limiting max width for better readability */
+  margin: 0 auto; /* Center the carousel item */
+}
+
+#testimonialCarousel .blockquote {
+  padding: 0.5rem 1.5rem; /* Padding for the blockquote */
+  font-size: 1.2rem; /* Slightly larger font for readability */
+  position: relative;
+  background-color: rgba(52, 58, 64, 0.85); /* Semi-transparent dark background */
+  border-radius: 5px; /* Optional: adds rounded corners */
+}
+
+#testimonialCarousel .blockquote-footer {
+  color: #ffc107; /* Color to match the theme's warning color for citation */
+  font-size: 1rem; /* Appropriately size the footer text */
+  margin-top: 0.5rem; /* Space between the quote and its citation */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1); /* Invert the icons to white for better visibility */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  #testimonialCarousel .carousel-item {
+    max-width: 90%; /* Allows more width on smaller screens for better layout */
+  }
+}
+
 
 @media (max-width: 992px) { /* Adjusts for Bootstrap's large (lg) breakpoint or your specific needs */
   .custom-quote-button {
