@@ -30,6 +30,26 @@ html, body {
     background-color: #ffc107; /* Optional: Change background color on hover to match the "warning" theme */
     color: #343a40; /* Change text color on hover for better contrast, if needed */
   }
+
+  .navbar-brand > span {
+    display: block; /* Continue treating each span as a block-level element */
+    margin: 0; /* Reset default margins */
+    padding: 0; /* Reset default paddings */
+  }
+  
+  /* Adjust the bottom margin of the first span */
+  .navbar-brand > span:first-child {
+    letter-spacing: 1.4px;
+    margin-bottom: -5px; /* Pulls the "Technology" text closer to "8-Bit Hive" */
+  }
+  
+  /* Optional: Adjust the top margin of the second span if needed */
+  .navbar-brand > span:nth-child(2) {
+    margin-top: -5px; /* Further adjustment if needed */
+    letter-spacing: 1.4px; /* Keep your previous adjustments */
+    font-size: 0.9em; /* Keep your previous adjustments */
+  }
+  
   
 
 /* HERO */
