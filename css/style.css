@@ -8,6 +8,11 @@ html, body {
     font-family: 'Bai Jamjuree', sans-serif;
 }
 
+/* Change color to white on hover for all hyperlinks */
+a:hover {
+  color: #ffffff; /* Changes color to white on hover */
+}
+
 /* NAVIGATION */
 
 .nav-link-hover:hover {
@@ -579,9 +584,58 @@ button[type="submit"]:hover {
 }
 
 /* Local SEO */
+.local-hero {
+  position: relative;
+  background-image: url('../img/hero.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.local-hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8); /* Dark grey overlay */
+  z-index: 0;
+}
+
+.local-hero .container-lg {
+  position: relative;
+  z-index: 1; /* Ensures content is above the overlay */
+}
+
 .map-container {
   text-align: center; /* Center the map container */
+  position: relative;
+  background-image: url('../img/map.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
+
+.map-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8); /* Dark grey overlay */
+  z-index: 1; /* Overlay z-index is set to 1 */
+}
+
+/* Correctly set the z-index of content within .map-container to be above the overlay */
+.map-container iframe, .map-container .container {
+  position: relative;
+  z-index: 2; /* Ensures content is above the overlay */
+}
+
+
+
 
 .map-container iframe {
   width: 600px; /* Set the width */
@@ -595,4 +649,88 @@ button[type="submit"]:hover {
     width: 100%; /* Make it responsive */
     height: auto; /* Adjust the height automatically */
   }
+}
+
+.hero-logo {
+  max-width: 300px; /* Adjust the size of the logo */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 20px; /* Add some space below the logo */
+}
+
+@media (max-width: 768px) {
+  .hero-logo {
+    max-width: 150px; /* Slightly smaller logo for smaller devices */
+    margin-bottom: 10px; /* Less space below the logo on smaller devices */
+  }
+}
+
+
+/* Centering text in the accordion header and body */
+.accordion-button, .accordion-body {
+  text-align: center;
+}
+
+/* Customizing accordion button with arrows on both sides */
+.accordion-button::before, .accordion-button::after {
+  font-family: "Font Awesome 5 Free"; /* Adjust based on the Font Awesome version you have */
+  font-weight: 900;
+  content: "\f078"; /* FontAwesome arrow down */
+  color: #ffc107; /* Your theme's yellow color */
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.accordion-button::after {
+  content: "\f077"; /* FontAwesome arrow up */
+  right: 20px; /* Adjust spacing based on your design */
+}
+
+.accordion-button::before {
+  left: 20px;
+}
+
+.accordion-button:not(.collapsed)::after {
+  display: none; /* Hide the up arrow when accordion is collapsed */
+}
+
+/* Correcting styles when accordion button is focused or not collapsed */
+.accordion-button:not(.collapsed) {
+  color: #ffc107; /* Maintain the yellow color for text */
+  background-color: rgba(52, 58, 64, 0.9); /* Maintain the dark theme background */
+}
+.accordion-button:focus {
+  box-shadow: 0 0 0 0.25rem rgba(255, 193, 7, 0.5); /* Focus shadow in theme color, adjust if necessary */
+  z-index: 3; /* Ensures the focus ring is above adjacent elements */
+}
+
+
+
+/* Ensures arrows and text color change on hover */
+.accordion-button:hover::before, .accordion-button:hover::after, .accordion-button:hover {
+  color: #fff; /* Hover color for arrows and text */
+}
+
+/* Accordion header styling */
+.accordion-button {
+  background-color: rgba(52, 58, 64, 0.9); /* Your dark theme background */
+  color: #ffc107; /* Your theme's yellow color for text */
+  border: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow for depth */
+}
+
+/* Centering accordion header text */
+.accordion-button {
+  justify-content: center; /* Center button content */
+  text-align: center;
+}
+
+
+.accordion-button.collapsed {
+  color: #ffc107; /* Color of text and arrow when collapsed */
+}
+
+.accordion-body {
+  background-color: rgba(52, 58, 64, 0.9);
+  color: #ffc107;
 }
