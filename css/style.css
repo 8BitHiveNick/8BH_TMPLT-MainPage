@@ -738,3 +738,9 @@ button[type="submit"]:hover {
   background-color: rgba(52, 58, 64, 0.9);
   color: #ffc107;
 }
+
+/* Portfolio */
+.project-hero img {
+  max-width: 60%; /* Adjust this value to control the image size */
+  margin: 0 auto; /* Ensures the image is centered */
+}
